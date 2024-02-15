@@ -13,16 +13,16 @@ export default function Home() {
           <a
             href="https://forms.gle/NH2Bv81rhuzXdiDT8"
             target="_blank"
-            className="border cursor-pointer border-teal-800 px-6 py-2 text-xl text-center font-serif hover:bg-teal-800 hover:text-white text-black"
+            className="transition-all bg-white border cursor-pointer border-teal-800 px-6 py-2 text-xl text-center font-serif hover:bg-teal-800 hover:text-white text-black"
           >
             Contact Us
           </a>
         </div>
       </header>
-      <div className="w-full h-[1px] bg-gray-500 my-12 max-w-sm mx-auto w-full" />
+      <div className="h-[1px] bg-gray-500 my-12 max-w-sm mx-auto w-full" />
       <section className="">
         <p className="font-sans leading-relaxed text-gray-700">
-          <span className="block mb-2 font-bold text-gray-800">
+          <span className="block mb-2 font-serif text-xl font-bold text-gray-800">
             We're a small business that gets it.
           </span>{" "}
           Based in Hilliard Ohio, Darn Fine Software works with other small to
@@ -34,11 +34,11 @@ export default function Home() {
         </p>
       </section>
 
-      <div className="w-full h-[1px] bg-gray-500 my-12 max-w-sm mx-auto w-full" />
+      <div className="h-[1px] bg-gray-500 my-12 max-w-sm mx-auto w-full" />
 
       <section className="">
         <p className="font-sans leading-relaxed text-gray-700">
-          <span className="block mb-2 font-bold text-gray-800">
+          <span className="block mb-2 font-serif text-xl font-bold text-gray-800">
             Our process revolves around you.
           </span>{" "}
           When you come to us with an idea, we sit down and get to know you,
