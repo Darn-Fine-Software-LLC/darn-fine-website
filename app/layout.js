@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <div className="flex min-h-screen flex-col">
           <div className="flex-1">{children}</div>
           <footer className="w-full bg-gray-100 px-10 md:px-20 py-6 text-center flex flex-col justify-center">
-            <span className="block text-sm text-gray-600 font-bold">
+            <span className="block text-sm text-gray-600 font-serif font-bold">
               Darn Fine Software LLC
             </span>
             <span className="block text-sm text-gray-500 w-full">
