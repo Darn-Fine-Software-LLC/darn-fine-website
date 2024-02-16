@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import ChamberLogo from "@/components/ChamberLogo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
                 Email Us
               </a>
             </span>
+            <ChamberLogo />
           </footer>
         </div>
       </body>
