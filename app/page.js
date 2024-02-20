@@ -1,74 +1,65 @@
+import InfoSection from "@/components/InfoSection";
+import Nav from "@/components/Nav";
+import ServicesSection from "@/components/ServicesSection";
+import Link from "next/link";
+
+const Header = () => {
+  return (
+    <header className="px-8 my-20 md:my-32 flex flex-col items-center justify-center">
+      <div className="max-w-4xl text-center">
+        <h1 className="text-2xl md:text-5xl font-bold tracking-tight text-white mb-6">
+          Custom web, mobile and desktop development in Hilliard, Ohio.
+        </h1>
+      </div>
+      <div className="max-w-xl text-center mb-8">
+        <p className="text-lg md:text-xl font-sans text-center tracking-tight text-slate-400">
+          We take your projects from idea to beautifully designed, modern
+          applications.
+        </p>
+      </div>
+      <a
+        href="https://forms.gle/NH2Bv81rhuzXdiDT8"
+        target="_blank"
+        className="rounded-lg px-6 py-3 text-sm font-bold hover:ring transition-all font-sans text-center text-slate-300 bg-slate-800 flex flex-row items-center gap-2 border-slate-700 border shadow-sm"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          ariaHidden="true"
+          data-slot="icon"
+          className="w-5 h-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+          />
+        </svg>
+        Get a quote
+      </a>
+    </header>
+  );
+};
+
 export default function Home() {
   return (
-    <main className="p-8 md:p-24 max-w-3xl mx-auto">
-      <header className="flex flex-col items-center justify-center">
-        <img src="/logo.svg" className="w-16 mb-6" />
-        <span className="font-serif block text-3xl text-center">
-          Darn Fine Software
-        </span>
-        <h1 className="block font-sans text-xl text-center">
-          Custom Web & Mobile Development
-        </h1>
-        <div className="mt-8">
-          <a
-            href="https://forms.gle/NH2Bv81rhuzXdiDT8"
-            target="_blank"
-            className="transition-all bg-white border cursor-pointer border-teal-800 px-6 py-2 text-xl text-center font-serif hover:bg-teal-800 hover:text-white text-black"
-          >
-            Contact Us
-          </a>
-        </div>
-      </header>
-      <div className="h-[1px] bg-gray-500 my-12 max-w-sm mx-auto w-full" />
-      <section className="">
-        <p className="font-sans leading-relaxed text-gray-700">
-          <span className="block mb-2 font-serif text-xl font-bold text-gray-800">
-            We're a small business that gets it.
-          </span>{" "}
-          Based in Hilliard Ohio, Darn Fine Software works with other small to
-          medium size companies to develop custom websites, mobile and desktop
-          applications <span className="font-bold">from the ground up</span>. We
-          don't try to sell you on expensive cloud services or reused templates,
-          instead we work with you to find the best, most cost-effective way to
-          solve your business needs.
+    <main className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 min-h-screen w-screen">
+      <Nav items={[]} />
+      <Header />
+      <InfoSection title={`A software agency that understands your business.`}>
+        <p className="text-base md:text-lg tracking-wide font-sans text-slate-700">
+          At Darn Fine Software, we're a small business that gives our full
+          attention to each and every client. We're not here to oversell you or
+          leave you with outrageous cloud bills. Our process resolves around
+          your needs and business objectives.
         </p>
-      </section>
-
-      <div className="h-[1px] bg-gray-500 my-12 max-w-sm mx-auto w-full" />
-
-      <section className="">
-        <p className="font-sans leading-relaxed text-gray-700">
-          <span className="block mb-2 font-serif text-xl font-bold text-gray-800">
-            Our process revolves around you.
-          </span>{" "}
-          When you come to us with an idea, we sit down and get to know you,
-          your business and the needs your idea is solving. This process
-          includes brainstorming different approaches, outlining feasability and
-          definining your success criteria.
-        </p>
-        <p className="font-sans leading-relaxed text-gray-700 mt-8">
-          Once we're both happy with moving the project forward, Darn Fine
-          Software starts with design and usability. We interview potential
-          users, talk with stakeholders and begin to wireframe the user
-          interface. This step is critical, it's important to get the
-          fundamentals right and create something that not only solves your
-          business need, but exceeds your user's expectations.
-        </p>
-        <p className="font-sans leading-relaxed text-gray-700 mt-8">
-          After designs have been completed and signed off on, Darn Fine
-          Software begins the development phase. During this phase, we keep a
-          constant line of communication with you. You always know exactly what
-          we're doing, and what we have left. Our developers are experienced in
-          creating modern, battle-tested applications that use industry best
-          practices.
-        </p>
-        <p className="font-sans leading-relaxed text-gray-700 mt-8">
-          Once we're both happy with the developed solution, Darn Fine Software
-          will ensure you have access to all code, assets and infastructure.
-          Because we're local, Darn Fine Software is just a phone call away when
-          you need to make changes.
-        </p>
-      </section>
+      </InfoSection>
+      <div className="py-16">
+        <ServicesSection title={`Our Services`} />
+      </div>
     </main>
   );
 }
