@@ -1,18 +1,14 @@
 "use client";
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { useEffect } from "react";
+import particles from "@/assets/particles.json";
 import { loadSlim } from "@tsparticles/slim";
-import { useEffect, useState } from "react";
-import * as particles from "@/assets/particles.json";
 
 export default function Header() {
-  const [init, setInit] = useState(false);
-
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
     });
   }, []);
 
@@ -45,7 +41,7 @@ export default function Header() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          ariaHidden="true"
+          aria-hidden="true"
           data-slot="icon"
           className="w-5 h-5"
         >
