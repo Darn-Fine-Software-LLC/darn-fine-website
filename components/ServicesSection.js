@@ -1,13 +1,12 @@
 const SAMPLE_SERVICES = [
   {
-    title: "Business websites.",
+    title: "Custom websites.",
     content:
-      "Beautiful, modern, custom designs marketing and e-commerce websites for your business. We're experienced with Shopify, Drupal and Wordpress.",
+      "Modernly designed to perfectly represent your brand. Our websites get you found and get more people in the door.",
   },
   {
     title: "Mobile development.",
-    content:
-      "Reach your customers on the go with an iOS and Android mobile application.",
+    content: "Reach your customers on the go with iOS and Android mobile apps.",
   },
   {
     title: "Web application development.",
@@ -17,7 +16,7 @@ const SAMPLE_SERVICES = [
   {
     title: "UX design.",
     content:
-      "A good user experience can make or break an application. We're experienced designers that make your application beautiful and functional.",
+      "A good user experience can make or break an application. We're experts in design and user experience.",
   },
 ];
 
