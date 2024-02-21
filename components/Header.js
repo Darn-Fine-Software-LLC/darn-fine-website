@@ -7,8 +7,8 @@ import { loadSlim } from "@tsparticles/slim";
 
 export default function Header() {
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
+    initParticlesEngine((engine) => {
+      loadSlim(engine);
     });
   }, []);
 
