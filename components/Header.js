@@ -7,6 +7,7 @@ export default function Header() {
   const particlesRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     if (particlesRef?.current) {
       window?.particlesJS.load(
         "particles-js",
