@@ -1,31 +1,35 @@
 "use client";
 
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect } from "react";
-import particles from "@/assets/particles.json";
-import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useRef } from "react";
+import "@/assets/particles.min.js";
 
 export default function Header() {
+  const particlesRef = useRef(null);
+
   useEffect(() => {
-    initParticlesEngine((engine) => {
-      loadSlim(engine);
-    });
-  }, []);
+    if (particlesRef?.current) {
+      window?.particlesJS.load(
+        "particles-js",
+        "/particles.json",
+        function () {},
+      );
+    }
+  }, [particlesRef]);
 
   return (
-    <header className="px-8 py-20 md:py-32 flex flex-col items-center justify-center relative overflow-hidden">
-      <Particles
-        id="tsparticles"
-        className="absolute top-0 left-0 right-0 bottom-0 z-10 overflow-hidden"
-        options={particles}
+    <header className="relative flex flex-col items-center justify-center overflow-hidden px-8 py-20 md:py-32">
+      <div
+        id="particles-js"
+        className="absolute bottom-0 left-0 right-0 top-0 z-10 overflow-hidden"
+        ref={particlesRef}
       />
-      <div className="max-w-4xl text-center z-20">
-        <h1 className="text-2xl md:text-5xl font-bold tracking-tight text-white mb-6">
+      <div className="z-20 max-w-4xl text-center">
+        <h1 className="mb-6 text-2xl font-bold tracking-tight text-white md:text-5xl">
           Custom web, mobile and desktop development in Hilliard, Ohio.
         </h1>
       </div>
-      <div className="max-w-xl text-center mb-8 z-20">
-        <p className="text-lg md:text-xl font-sans text-center tracking-tight text-slate-400">
+      <div className="z-20 mb-8 max-w-xl text-center">
+        <p className="text-center font-sans text-lg tracking-tight text-slate-400 md:text-xl">
           We take your projects from idea to beautifully designed, modern
           applications.
         </p>
@@ -33,7 +37,7 @@ export default function Header() {
       <a
         href="https://forms.gle/NH2Bv81rhuzXdiDT8"
         target="_blank"
-        className="rounded-lg px-6 py-3 text-sm z-20 font-bold hover:ring transition-all font-sans text-center text-slate-300 bg-slate-800 flex flex-row items-center gap-2 border-slate-700 border shadow-sm"
+        className="z-20 flex flex-row items-center gap-2 rounded-lg border border-slate-700 bg-slate-800 px-6 py-3 text-center font-sans text-sm font-bold text-slate-300 shadow-sm transition-all hover:ring"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +47,7 @@ export default function Header() {
           stroke="currentColor"
           aria-hidden="true"
           data-slot="icon"
-          className="w-5 h-5"
+          className="h-5 w-5"
         >
           <path
             strokeLinecap="round"
