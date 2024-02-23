@@ -1,21 +1,18 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import "@/assets/particles.min.js";
 
 export default function Header() {
   const particlesRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (particlesRef?.current) {
-      window?.particlesJS.load(
-        "particles-js",
-        "/particles.json",
-        function () {},
-      );
-    }
+    if (window && typeof window !== "undefined") setupParticles();
   }, [particlesRef]);
+
+  const setupParticles = async () => {
+    await import("@/assets/particles.min.js");
+    window.particlesJS.load("particles-js", "/particles.json", function () {});
+  };
 
   return (
     <header className="relative flex flex-col items-center justify-center overflow-hidden px-8 py-20 md:py-32">
