@@ -9,6 +9,7 @@ module.exports = {
     fontFamily: {
       sans: ["Nunito", "sans-serif"],
       serif: ["Playfair Display", "serif"],
+      noto: ["Noto Sans", "sans-serif"],
     },
     extend: {
       backgroundImage: {
@@ -18,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

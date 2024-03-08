@@ -22,15 +22,13 @@ const SAMPLE_SERVICES = [
 
 const Service = ({ title, content }) => {
   return (
-    <li className="sm:h-64 border-2 border-slate-500 p-6 bg-black/15 backdrop-blur flex items-start justify-center hover:shadow-xl shadow-sm transition-all">
+    <li className="sm:h-64 border-2 border-slate-500 p-6 bg-white/30 rounded-lg backdrop-blur-lg flex items-start justify-center hover:shadow-xl shadow-sm transition-all">
       <div>
         <div className="sm:h-16 flex items-center justify-center mb-4">
-          <h3 className="text-lg font-bold text-slate-300 text-center ">
-            {title}
-          </h3>{" "}
+          <h3 className="text-lg font-bold text-white text-center ">{title}</h3>{" "}
         </div>
 
-        <p className="text-slate-400 font-sans text-center">{content}</p>
+        <p className="text-slate-50 font-sans text-center">{content}</p>
       </div>
     </li>
   );

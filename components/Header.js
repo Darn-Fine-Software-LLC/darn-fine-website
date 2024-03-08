@@ -15,19 +15,19 @@ export default function Header() {
   };
 
   return (
-    <header className="relative flex flex-col items-center justify-center overflow-hidden px-8 py-20 md:py-32">
+    <header className="relative flex flex-col items-center justify-center overflow-hidden px-8 py-20 md:py-32 font-noto">
       <div
         id="particles-js"
-        className="absolute bottom-0 left-0 right-0 top-0 z-10 overflow-hidden"
+        className="absolute bottom-0 left-0 right-0 top-0 z-10 overflow-hidden blur-sm"
         ref={particlesRef}
       />
-      <div className="z-20 max-w-4xl text-center">
-        <h1 className="mb-6 text-2xl font-bold tracking-tight text-white md:text-5xl">
+      <div className="z-20 max-w-4xl text-left">
+        <h1 className="mb-6 text-xl font-medium font-noto leading-loose text-white md:text-5xl">
           Custom web, mobile and desktop development in Hilliard, Ohio.
         </h1>
       </div>
-      <div className="z-20 mb-8 max-w-xl text-center">
-        <p className="text-center font-sans text-lg tracking-tight text-slate-400 md:text-xl">
+      <div className="z-20 mb-8 w-full">
+        <p className="text-left font-sans text-lg tracking-tight text-slate-400 md:text-xl">
           We take your projects from idea to beautifully designed, modern
           applications.
         </p>

@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="flex min-h-screen flex-col">
-          <div className="flex-1">{children}</div>
+          <div className="flex-1 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 min-h-screen w-screen">
+            {children}
+          </div>
           <footer className="w-full bg-gray-100 px-10 md:px-20 py-6 text-center flex flex-col justify-center">
             <span className="block text-sm text-gray-600 font-serif font-bold">
               Darn Fine Software LLC
